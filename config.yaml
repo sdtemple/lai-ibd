@@ -1,0 +1,11 @@
+change:
+  files:
+    study: '/mnt/c/Users/sethd/Downloads/2509/ajhg-case-control/zenododata/lai-ibd'
+    flare_prefix: '/mnt/c/Users/sethd/Downloads/2509/ajhg-case-control/zenododata/AmericanAdmixture_4B11/phasing-vcf/lai/chr'
+    flare_suffix: '.referencephased.flare.anc.vcf.gz'
+    map_prefix: '/mnt/c/Users/sethd/Downloads/2509/ajhg-case-control/zenododata/AmericanAdmixture_4B11/phasing-vcf/maps/chr'
+    map_suffix: '.map'
+    ibd_prefix: '/mnt/c/Users/sethd/Downloads/2509/ajhg-case-control/zenododata/AmericanAdmixture_4B11/phasing-vcf/ibdsegs/chr'
+    ibd_suffix: '.referencephased.adx.hapibd.ibd.gz'
+    chromosome_low: '20'
+    chromosome_high: '22'
