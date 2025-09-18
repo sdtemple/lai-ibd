@@ -45,4 +45,4 @@ for _ in range(num_ibd_segments):
 
 print(f'Percent {num_not_covered/num_ibd_segments} of IBD segments not fully covered by LAI segments')
 print(f'Percent {num_different_ancestry/num_ibd_segments} of fully covered IBD segments have different ancestries on haplotypes')
-ibd.to_csv(fileout, sep='\t', index=False, columns = ['IDHAP1','IDHAP2','ANCESTRY','CHROM','START','END','CM'])
+ibd.to_csv(fileout, sep='\t', index=False, columns = ['ID1','HAP1','ID2','HAP2','ANCESTRY','CHROM','START','END','CM'])
