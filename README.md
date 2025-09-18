@@ -18,6 +18,7 @@ I have not designed the `scripts/overlap-flare-lai-and-ibd.py` script for chunke
 
 Some assumptions of the scripts are:
 - There are less than 11 ancestry groups in the FLARE analysis.
+- The FLARE optional parameter is probs=false (hard calls not ancestry dosages).
 - You have used the file format of `hap-ibd.jar` to call IBD.
 - You have Python `pandas` installed in your current environment.
 - You have Snakemake installed in your current environment.
