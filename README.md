@@ -9,20 +9,30 @@ This pipeline is a series of three Python scripts that determine if both haploty
 
 In `config.yaml`, you need to adjust the file paths to where your genetic map, FLARE, and IBD segment data are.
 
+You can run the script with `snakemake -c1 --configfile config.yaml`. Use `-n` to make a dry-run and see if the files are specified correctly. Visit [isweep](https://isweep.readthedocs.io/en/latest/misc.html#snakemake-options) for more advice.
+
+I have not designed the `scripts/overlap-flare-lai-and-ibd.py` script for chunked dataframe processing. If you have a large IBD file (say from a biobank-scale) analysis, the program may crash.
+
+### Assumptions
+---
+
 Some assumptions of the scripts are:
 - There are less than 11 ancestry groups in the FLARE analysis.
 - You have used the file format of `hap-ibd.jar` to call IBD.
 - You have Python `pandas` installed in your current environment.
 - You have Snakemake installed in your current environment.
 
+### Other software
+---
 
 This code is part of a Snakemake workflow.
 
 For more information about Snakemake workflows, rules, and configuration, see the official documentation:
-https://snakemake.readthedocs.io/
+https://snakemake.readthedocs.io/.
 
 This code is written and tested on output data from
 - [FLARE (Browning Lab)](https://github.com/browning-lab/flare)
 - [hap-ibd (Browning Lab)](https://github.com/browning-lab/hap-ibd)
 
+This code can be run after the [isweep local ancestry pipeline](https://github.com/sdtemple/isweep/tree/main/workflow/phasing-ancestry).
 
