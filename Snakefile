@@ -27,7 +27,7 @@ for chromosome in range(int(chromosome_low),int(chromosome_high)+1):
 
 rule all:
     input:
-        [macro + '/chr' + str(chromosome) + '.lai.ibd.overlap.gz' for chromosome in range(int(chromosome_low),int(chromosome_high)+1)],
+        [macro + '/chr' + str(chromosome) + '.lai.ibd.gz' for chromosome in range(int(chromosome_low),int(chromosome_high)+1)],
         # macro + '/config.yaml',
 
 rule clean_flare:
@@ -58,7 +58,7 @@ rule overlap_lai_ibd:
     input:
         laiin='{macro}/chr{chromosome}.lai.segments.gz',
     output:
-        fileout='{macro}/chr{chromosome}.lai.ibd.overlap.gz',
+        fileout='{macro}/chr{chromosome}.lai.ibd.gz',
     params:
         ibdin=ibd_prefix + '{chromosome}' + ibd_suffix,
     shell:
