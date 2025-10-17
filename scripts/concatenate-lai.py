@@ -5,6 +5,7 @@
 
 import sys
 import gzip
+import re
 
 filein, fileout, = sys.argv[1:]
 
@@ -23,7 +24,14 @@ with gzip.open(fileout, 'wt') as g:
         positional = line[:3]
         cM = float(line[2])
         bp = int(line[1])
-        chrom = int(line[0])
+
+        # # get string whether it be chr1 or 1
+        # chrom = line[0]
+
+        # get number only
+        match = re.search(r'\d+', line[0])
+        chrom = int(match.group())
+
         ancestry_data = line[3:]
         for _ in range(nind):
             ind = individuals[_]
